@@ -1,7 +1,6 @@
 cadastro = dict()
 lista = list()
 gols = list()
-total = 0
 opcao = 'Ss'
 while True:
     cadastro.clear()
