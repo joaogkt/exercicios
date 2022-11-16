@@ -13,17 +13,25 @@ while True:
     dados['idade'] = int(input("Idade: "))
     media += dados['idade']
     lista.append(dados.copy())
-    if dados['sexo'] == 'F':
-        mulher.append(dados.copy())
-    opcao = str(input("Deseja continuar? [S/N]: "))
+    opcao = str(input("Deseja continuar? [S/N]: ")).upper()
+    while opcao not in {'S', 'N'}:
+        print("ERRO! Responda apenas com S ou N")
+        opcao = str(input("Deseja continuar? [S/N]: ")).upper()
     if opcao in 'Nn':
         break
-media /= len(lista)
-if dados['idade'] > media:
-    velhos.append(dados.copy)
 
+media /= len(lista)
+
+for p in lista:
+    if p['sexo'] == 'F':
+        mulher.append(p['nome'])
+        
+for p in lista:
+    if p['idade'] > media:
+        velhos.append(p['nome'])
+    
 print(lista)
 print(f"Foram cadastradas {len(lista)} pessoas")
-print(f'A media de idade do grupo é: {media}')
+print(f'A media de idade do grupo é: {media:5.2f}')
 print(f'A lista de mulheres: {mulher}')
 print(f'Lista de pessoas mais velhas: {velhos}')
