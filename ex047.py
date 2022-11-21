@@ -1,11 +1,8 @@
 from random import randint
 
 def sorteia(lst):
-    lst.append(randint(0, 20))
-    lst.append(randint(0, 20))
-    lst.append(randint(0, 20))
-    lst.append(randint(0, 20))
-    lst.append(randint(0, 20))
+    for cont in range(0, 5):
+        n = lst.append(randint(0, 20))
 
 def somaPar(lst):
     soma = 0
@@ -13,7 +10,6 @@ def somaPar(lst):
         if v % 2 == 0:
             soma += v
     return soma
-
 
 numeros = list()
 sorteia(numeros)
