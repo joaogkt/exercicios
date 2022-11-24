@@ -7,3 +7,4 @@ except:
     print('ERRO, Não foi possivel acessar o site')
 else:
     print('Site acessado com sucesso!!')
+    print(site.read())
